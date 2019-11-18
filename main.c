@@ -1,27 +1,4 @@
-#include <stdlib.h>
-#include <stdio.h>
-
-int ft_size(FILE* fichier)
-{
-	int size = 0;
-
-	fseek (fichier , 0, SEEK_END);
-    size = ftell (fichier );
-    return size;
-}
-
-int aff_content(FILE* fichier)
-{
-	int caractereActuel = 0;
- 	do
-    {
-        caractereActuel = fgetc(fichier);  // On lit le caractère            printf("%c", caractereActuel); // On l'affiche
-		printf("%c", caractereActuel);
-    } while (caractereActuel != EOF); // On continue tant que fgetc n'a pas retourné EOF (fin de fichier)
-	fclose(fichier);
-	return 0;
-}
-
+#include "ft.h"
 
 int main(int ac, char **av)
 {
