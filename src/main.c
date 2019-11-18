@@ -1,6 +1,6 @@
 #include "ft.h"
 
-int main(int ac, char **av)
+int main(void)
 {
 	FILE* fichier = NULL;
 	FILE* term = NULL;
