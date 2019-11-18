@@ -4,11 +4,11 @@ int main(void)
 {
 	FILE* fichier = NULL;
 	FILE* term = NULL;
-	fichier = fopen("test.logo", "r+");
+	fichier = fopen("src/test.logo", "r+");
 
 	if (fichier == NULL)
 	{
-        // On affiche un message d'erreur si on veut
+        //* On affiche un message d'erreur si le fichier ne peut pas s'ouvrir ou si il se trouve au mauvais endroit
         printf("Impossible d'ouvrir le fichier");
 		term = fopen("term.logo", "w+");
 		aff_content(term);
@@ -17,7 +17,6 @@ int main(void)
 
 	else if (fichier != NULL && ft_size(fichier) == 0)
 	{
-        // On affiche un message d'erreur si on veut
         printf("Fichier vide!\n");
 		term = fopen("term.logo", "w+");
 
@@ -26,8 +25,7 @@ int main(void)
 	}
 
     else if (fichier != NULL && ft_size(fichier) != 0)
-    {
-        // On peut lire et écrire dans le fichier
+    { 
 		printf("Le fichier contient:\n\n");
 		aff_content(fichier);
     }
