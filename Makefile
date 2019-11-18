@@ -1,5 +1,5 @@
 NAME = LogoDuPauvre
-SRC = src/main.c src/lil_ft.c
+SRC = src/main.c src/lil_ft.c src/parser.c
 
 all: $(NAME)
 
