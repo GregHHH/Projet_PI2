@@ -1,6 +1,15 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+int ft_size(FILE* fichier)
+{
+	int size = 0;
+
+	fseek (fichier , 0, SEEK_END);
+    size = ftell (fichier );
+    return size;
+}
+
 int aff_content(FILE* fichier)
 {
 	int caractereActuel = 0;
@@ -19,11 +28,7 @@ int main(int ac, char **av)
 	FILE* fichier = NULL;
 	FILE* term = NULL;
 	fichier = fopen("test.logo", "r+");
-	int size = 0;
 
-    fseek (fichier , 0, SEEK_END);
-    size = ftell (fichier );
-    rewind(fichier );
 	if (fichier == NULL)
 	{
         // On affiche un message d'erreur si on veut
@@ -33,7 +38,7 @@ int main(int ac, char **av)
 
 	}
 
-	else if (fichier != NULL && size == 0)
+	else if (fichier != NULL && ft_size(fichier) == 0)
 	{
         // On affiche un message d'erreur si on veut
         printf("Fichier vide!\n");
@@ -43,7 +48,7 @@ int main(int ac, char **av)
 
 	}
 
-    else if (fichier != NULL && size != 0)
+    else if (fichier != NULL && ft_size(fichier) != 0)
     {
         // On peut lire et écrire dans le fichier
 		printf("Le fichier contient:\n\n");
