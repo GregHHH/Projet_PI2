@@ -6,6 +6,7 @@ int ft_size(FILE* fichier)
 
 	fseek (fichier , 0, SEEK_END);
     size = ftell (fichier );
+	rewind(fichier);
     return size;
 }
 
