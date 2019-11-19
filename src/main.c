@@ -17,7 +17,6 @@ int main(int ac, char **av)
 	{
 		if (fichier == NULL)
 		{
-        	//* On affiche un message d'erreur si le fichier ne peut pas s'ouvrir ou si il se trouve au mauvais endroit
     	   	printf("Impossible d'ouvrir le fichier!\n Le fichier n'existe pas ou ne se trouve pas dans le bon dossier");
 			term = fopen("src/term.logo", "w+");
 			aff_content(term);
