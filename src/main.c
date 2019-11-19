@@ -6,6 +6,7 @@ int main(int ac, char **av)
 	FILE* fichier = NULL;
 	FILE* term = NULL;
 	fichier = fopen(filename, "r+");
+	char ligne[100];
 	
 	if (ac != 2)
 	{
@@ -27,14 +28,21 @@ int main(int ac, char **av)
 			term = fopen("src/term.logo", "w+");
 
 			aff_content(term);
+
 		}
 
     	else if (fichier != NULL && ft_size(fichier) != 0)
-    	{ 
-			printf("Le fichier contient:\n\n");
+    	{
+			printf("\nLe fichier contient:\n\n");
 			aff_content(fichier);
-    	}
-		remove("src/term.logo");
+			printf("-----------------------\n\n");
+
+
+			//TODO afficher chaques lignes puis les parser dans l'ordre//
+			//parser(); //!str pas FILE*//
+			
+			remove("src/term.logo");
+		}
+    	return 0;
 	}
-    return 0;
 }

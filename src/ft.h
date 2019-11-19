@@ -3,3 +3,5 @@
 
 int aff_content(FILE* fichier);
 int ft_size(FILE* fichier);
+
+void parser(char *str);
