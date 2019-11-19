@@ -6,7 +6,6 @@ int main(int ac, char **av)
 	FILE* fichier = NULL;
 	FILE* term = NULL;
 	fichier = fopen(filename, "r+");
-	char ligne[100];
 	
 	if (ac != 2)
 	{
