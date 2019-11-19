@@ -2,7 +2,6 @@
 
 int main(int ac, char **av)
 {
-	
 	char *filename = av[1];
 	FILE* fichier = NULL;
 	FILE* term = NULL;
