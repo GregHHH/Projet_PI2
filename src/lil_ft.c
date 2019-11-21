@@ -15,9 +15,9 @@ int aff_content(FILE* fichier)
 	int caractereActuel = 0;
  	do
     {
-        caractereActuel = fgetc(fichier);  // On lit le caractère            printf("%c", caractereActuel); // On l'affiche
+        caractereActuel = fgetc(fichier);  // On lit le caractère        
 		if (caractereActuel != EOF)
-			printf("%c", caractereActuel);
+			printf("%c", caractereActuel); // On l'affiche
     } while (caractereActuel != EOF); // On continue tant que fgetc n'a pas retourné EOF (fin de fichier)
 	printf("\n");
 	fclose(fichier);
