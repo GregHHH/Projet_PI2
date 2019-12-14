@@ -2,11 +2,16 @@
 
 int main(int ac, char **av)
 {
+
+	glutInit(&ac,av);
+	glutInitDisplayMode(GLUT_RGBA | GLUT_SINGLE);
+
 	char *filename = av[1];
 	FILE* fichier = NULL;
 	FILE* term = NULL;
 	fichier = fopen(filename, "r+");
 	char buff[1000];
+	int W1;
 	
 	/* Pas suffisamment d'arguments. fin du programme */
 	if (ac != 2)
@@ -52,10 +57,18 @@ int main(int ac, char **av)
 
 
 			//TODO afficher chaques lignes puis les parser dans l'ordre//
-			//parser(); //!str pas FILE*//
-			
+			//parser(); //! str pas FILE*//
+
+			glutInitWindowSize(WIDTH1,HEIGHT1);
+			glutInitWindowPosition(150,150);
+			W1=glutCreateWindow("Logo");
+			glutDisplayFunc(vDisplay1);
+			glutReshapeFunc(vReshape1);
+			glutMainLoop();
 			remove("src/term.logo");
 		}
     	return 0;
 	}
+
+	
 }

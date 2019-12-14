@@ -1,5 +1,4 @@
-#include <string.h>
-#include <stdio.h>
+#include "ft.h"
 
 void parser(char *str)
 {
