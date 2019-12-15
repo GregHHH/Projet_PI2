@@ -9,6 +9,13 @@
 #define WIDTH1 640
 #define HEIGHT1 480
 
+struct nbr 
+{
+   int s;
+   char cp[100];
+};
+typedef struct nbr t;
+
 /* gl.c */
 void vDisplay1();
 void vReshape1(int w, int h);
