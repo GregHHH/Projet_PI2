@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <string.h>
+#include <math.h>
 
 #define WIDTH1 640
 #define HEIGHT1 480

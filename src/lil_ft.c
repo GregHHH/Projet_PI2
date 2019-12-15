@@ -23,3 +23,5 @@ int aff_content(FILE* fichier)
 	fclose(fichier);
 	return 0;
 }
+
+
