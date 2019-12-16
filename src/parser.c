@@ -1,6 +1,6 @@
 #include "ft.h"
 
-int parser()
+void parser()
 {
     t v;
     a a;
