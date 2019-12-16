@@ -12,7 +12,7 @@ void parser()
             break;
         case 'right' : case 'rt':
             v.type = 3;
-            a.way = 1
+            a.way = 1;
             break;
         case 'backward' : case 'bk':
             v.type = 2;
