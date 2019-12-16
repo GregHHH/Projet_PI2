@@ -15,7 +15,8 @@ struct logo
    int store; // numéro de l'element atteint en dernier
    int type; // Quel mot clé a été lu en dernier
 	char fonc[100];
-   char cp[][]; // tableau contenant chaque mot clé / valeur / symbole utilisés dans le code logo
+   char cp[][100]; // tableau contenant chaque mot clé / valeur / symbole utilisés dans le code logo
+   
 };
 typedef struct logo t;
 
