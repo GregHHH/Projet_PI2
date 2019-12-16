@@ -1,15 +1,35 @@
 #include "ft.h"
 
 void vDisplay1() 
-	{ 
-	glClearColor(0,0,0,0);
-	glClear(GL_COLOR_BUFFER_BIT);
+	{
+		t v;
+		parser();
+		if (v.type == 0)
+		{
 
-	glBegin(GL_LINES);
-    glVertex2f(100, 100);
-    glVertex2f(200, 200);
-	glEnd();
-	glFlush();
+		}
+		if (v.type == 1)
+		{
+
+		}
+		if (v.type == 2)
+		{
+
+		}
+		if (v.type == 3)
+		{
+
+		}	
+		if (v.type == 4)
+		{
+
+		}
+		if (v.type == 5)
+		{
+
+		}
+		glEnd();
+		glFlush();
 	} 
 	
 	void vReshape1(int w, int h) 

@@ -55,10 +55,6 @@ int main(int ac, char **av)
 			aff_content(fichier);
 			printf("-----------------------\n\n");
 
-
-			//TODO afficher chaques lignes puis les parser dans l'ordre//
-			//parser(); //! str pas FILE*//
-
 			glutInitWindowSize(WIDTH1,HEIGHT1);
 			glutInitWindowPosition(150,150);
 			W1=glutCreateWindow("Logo");

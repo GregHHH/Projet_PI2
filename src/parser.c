@@ -1,18 +1,31 @@
 #include "ft.h"
 
-void parser(char *str)
+int parser()
 {
-
-    // La définitions de séparateurs connus.
-    const char * separators = " [],.-!";
-
-    // On cherche à récupérer, un à un, tous les mots (token) de la phrase
-    // et on commence par le premier.
-    char * strToken = strtok ( str, separators );
-    while ( strToken != NULL ) {
-        printf ( "%s\n", strToken );
-        // On demande le token suivant.
-        strToken = strtok ( NULL, separators );
+    t v;
+    a a;
+    switch (v.cp[v.store])
+    {
+        case 'fd' : case 'forward':
+            v.type = 1;
+            a.dist = v.cp[v.store+1];
+            break;
+        case 'right' : case 'rt':
+            v.type = 3;
+            a.way = 1
+            break;
+        case 'backward' : case 'bk':
+            v.type = 2;
+            a.way = 2;
+            break;
+        case 'left' : case 'lt' :
+            v.type = 4;   
+            break;
+        case 'clearscreen' : case 'cs' :
+            v.type = 5;
+            a.way = 3;
+            break;
+		default : ;
     }
-
 }
+

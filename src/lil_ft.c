@@ -33,3 +33,26 @@ int aff_content(FILE* fichier)
 	return 0;
 }
 
+
+void display()
+{
+    a a;
+    glClear(GL_COLOR_BUFFER_BIT);
+    glLoadIdentity();
+
+    // Epaisseur
+    glPointSize(5.0);
+
+    // draw
+    glBegin(GL_LINES);
+    glVertex2f(a.x,a.y); // Point de départ
+    glVertex2f(a.posx,a.posy); // point d'arriver
+     
+    a.x = a.posx;
+    a.y = a.posy;
+
+    glEnd();
+
+    glFlush();
+}
+
